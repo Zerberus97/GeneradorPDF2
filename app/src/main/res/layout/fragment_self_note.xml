@@ -32,7 +32,7 @@
         android:id="@+id/EditTextNombreEmpresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Prueba de PDF" />
+        android:text="Coca Cola" />
 
     <TextView
         android:id="@+id/textView5"
@@ -48,7 +48,7 @@
         android:id="@+id/EditTextDireccionEmpresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OwO" />
+        android:text="Calle falsa #123" />
 
     <TextView
         android:id="@+id/textView6"
@@ -69,8 +69,8 @@
             android:id="@+id/RServicio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Servicio"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:text="Servicio" />
 
         <RadioButton
             android:id="@+id/RControl"

@@ -21,6 +21,7 @@ import com.example.generadorpdf2.R;
 import com.itextpdf.text.Annotation;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -93,17 +94,20 @@ public class SelfNoteFragment extends Fragment implements View.OnClickListener {
                 }
 
                     //Comprobacion de los RadioButton
-                if (RGroup.getCheckedRadioButtonId() == -1){
-                    Toast.makeText(getActivity(),"Debe marcar un tipo de servicio",Toast.LENGTH_SHORT);
-                    RGroup.requestFocus();
-                    return;
-                }else {
+
                     if (RadioControl.isChecked() == true) {
                         TipoServicio = "Control";
                     } else if (RadioServicio.isChecked() == true) {
                         TipoServicio = "Servicio";
-                    }
+                    } if (RGroup.getCheckedRadioButtonId() == -1){
+                    Toast.makeText(getActivity(),"Debe marcar un tipo de servicio",Toast.LENGTH_LONG).show();
+
+                    RGroup.requestFocus();
+                    return;
+                }else {
+
                 }
+
 
 
                 try {
@@ -160,24 +164,23 @@ public class SelfNoteFragment extends Fragment implements View.OnClickListener {
 
         PdfWriter pdfW = PdfWriter.getInstance(document, new FileOutputStream(pdfFolder));
         PdfWriter.getInstance(document, output);
-
+        Image image = Image.getInstance("/drawable-hdpi/cristiano.jpg");
         //Abriendo el documento y cargando datos
         document.open();
         document.addAuthor("AntiMouse");
         //document.add(new Paragraph(txtNombreEmpresa.getText().toString()));
         //document.add(new Paragraph(txtDireccionEmpresa.getText().toString()));
         document.add(new Paragraph(TipoServicio));
+        document.add(image);
 
         XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
         String htmlToPdf = "<html>" +
                 "<head>" +
                 "</head>" +
                 "<body bgcolor='#E6E6FA'>" +
-                "<p>" + "Este es un PDF de prueba"+"</p>" +
-
-                "<h2> Nombre Empresa: "+ txtDireccionEmpresa.getText().toString() + "</h2>" +
+                "<h2> Nombre Empresa: "+ txtNombreEmpresa.getText().toString() + "</h2>" +
                 "</body> " +
-                "<h1>"+ txtNombreEmpresa.getText().toString() + "</h1> " +
+                "<h1> Direccion Empresa: "+ txtDireccionEmpresa.getText().toString() + "</h1> " +
                 "</html> ";
 
         String XHTML ="";
@@ -219,6 +222,8 @@ public class SelfNoteFragment extends Fragment implements View.OnClickListener {
     private void Limpiar(){
         txtNombreEmpresa.setText("");
         txtDireccionEmpresa.setText("");
+        RadioControl.setChecked(false);
+        RadioServicio.setChecked(false);
     }
 
 
