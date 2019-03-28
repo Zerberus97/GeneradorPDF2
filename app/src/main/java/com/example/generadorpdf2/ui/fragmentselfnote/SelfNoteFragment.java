@@ -93,12 +93,17 @@ public class SelfNoteFragment extends Fragment implements View.OnClickListener {
                 }
 
                     //Comprobacion de los RadioButton
-                if (RadioControl.isChecked()==true){
-                    TipoServicio = "Control";
-                }else
-                    if (RadioServicio.isChecked()==true){
+                if (RGroup.getCheckedRadioButtonId() == -1){
+                    Toast.makeText(getActivity(),"Debe marcar un tipo de servicio",Toast.LENGTH_SHORT);
+                    RGroup.requestFocus();
+                    return;
+                }else {
+                    if (RadioControl.isChecked() == true) {
+                        TipoServicio = "Control";
+                    } else if (RadioServicio.isChecked() == true) {
                         TipoServicio = "Servicio";
                     }
+                }
 
 
                 try {

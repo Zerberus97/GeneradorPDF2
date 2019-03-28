@@ -18,17 +18,47 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la empresa"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
     <EditText
         android:id="@+id/EditTextNombreEmpresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Prueba de PDF" />
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Direccion de la empresa"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
     <EditText
         android:id="@+id/EditTextDireccionEmpresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OwO" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de servicio"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/RGroup"
@@ -57,7 +87,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="200dp"
         android:text="Guardar Orden" />
 
     <Button
