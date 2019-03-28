@@ -1,43 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     >
 
+    <TextView
+        android:id="@+id/txtFormulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Formulario"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <EditText
-        android:id="@+id/edit_text_subject"
+        android:id="@+id/EditTextNombreEmpresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Prueba de PDF" />
 
     <EditText
-        android:id="@+id/edit_text_body"
+        android:id="@+id/EditTextDireccionEmpresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OwO" />
 
+    <RadioGroup
+        android:id="@+id/RGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/RServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servicio"
+            android:layout_marginTop="10dp"/>
+
+        <RadioButton
+            android:id="@+id/RControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Control" />
+
+    </RadioGroup>
+
+
+
     <Button
-    android:id="@+id/button_save"
-    android:layout_width="150dp"
-    android:layout_gravity="center_horizontal"
-    android:layout_height="wrap_content"
-    android:text="Guardar Orden" />
+        android:id="@+id/button_save"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="300dp"
+        android:text="Guardar Orden" />
 
     <Button
         android:id="@+id/button_send"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="left"
         android:text="Enviar Orden" />
 
     <Button
         android:id="@+id/button_read"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="left"
         android:text="Leer Orden" />
+
+
 
 </LinearLayout>
