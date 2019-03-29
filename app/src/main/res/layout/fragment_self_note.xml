@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
 
-    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="Suspicious0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <TextView
         android:id="@+id/txtFormulario"
@@ -51,6 +59,22 @@
         android:text="Calle falsa #123" />
 
     <TextView
+        android:id="@+id/txtRBD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RBD"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/EditTextRBD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:text="Ingrese RBD" />
+
+    <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,8 +105,213 @@
     </RadioGroup>
 
 
+    <TextView
+        android:id="@+id/txtControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Control de Roedores"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"/>
 
-    <Button
+            <RadioButton
+                android:id="@+id/RBpe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:text="Perimetro Exterior" />
+
+            <RadioButton
+                android:id="@+id/RBpi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Perimetro Interior" />
+
+            <RadioButton
+                android:id="@+id/RBb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Bodegas" />
+
+    <TextView
+        android:id="@+id/txtControlInsectos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Control de Insectos"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"/>
+
+    <RadioButton
+        android:id="@+id/RBext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Exterior" />
+
+    <RadioButton
+        android:id="@+id/RBint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interior" />
+
+    <RadioButton
+        android:id="@+id/RBbo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bodegas" />
+
+            <TextView
+                android:id="@+id/txtControlMicroorganismos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Control de Microorganismos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"/>
+
+            <RadioButton
+                android:id="@+id/RBsha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Serv. Hig. Adm." />
+
+            <RadioButton
+                android:id="@+id/RBshc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serv. Hig. Camarines" />
+
+            <RadioButton
+                android:id="@+id/RBcamF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Camara de Frio" />
+
+
+
+
+            <TextView
+                android:id="@+id/txtDesrratisacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desratizacion"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"/>
+
+            <RadioButton
+                android:id="@+id/RBbroma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Bromadiolona" />
+
+            <RadioButton
+                android:id="@+id/RBtrampa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trampa Captura Viva" />
+
+            <RadioButton
+                android:id="@+id/RBnotoxico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No toxico" />
+
+
+
+            <TextView
+                android:id="@+id/txtDesisn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desinsectacion"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"/>
+
+            <RadioButton
+                android:id="@+id/RBCipermetrina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Cipermetrina 25%" />
+
+            <RadioButton
+                android:id="@+id/RBDeltametrina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deltametrina" />
+
+            <RadioButton
+                android:id="@+id/RBAquatrin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aquatrin" />
+
+            <RadioButton
+                android:id="@+id/RBAgita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agita" />
+
+
+
+
+            <TextView
+                android:id="@+id/txtSaniti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sanitizacion"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"/>
+
+            <RadioButton
+                android:id="@+id/RBSanicitrex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sanicitrex" />
+
+
+            <TextView
+                android:id="@+id/txtObs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Observaciones"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"/>
+
+
+            <EditText
+                android:id="@+id/EditTextObservacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:text="Ingrese Observaciones" />
+
+            <Button
         android:id="@+id/button_save"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -105,5 +334,6 @@
         android:text="Leer Orden" />
 
 
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

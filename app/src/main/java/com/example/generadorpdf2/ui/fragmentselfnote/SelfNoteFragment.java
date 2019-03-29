@@ -164,20 +164,24 @@ public class SelfNoteFragment extends Fragment implements View.OnClickListener {
 
         PdfWriter pdfW = PdfWriter.getInstance(document, new FileOutputStream(pdfFolder));
         PdfWriter.getInstance(document, output);
-        Image image = Image.getInstance("/drawable-hdpi/cristiano.jpg");
+
         //Abriendo el documento y cargando datos
         document.open();
         document.addAuthor("AntiMouse");
         //document.add(new Paragraph(txtNombreEmpresa.getText().toString()));
         //document.add(new Paragraph(txtDireccionEmpresa.getText().toString()));
-        document.add(new Paragraph(TipoServicio));
-        document.add(image);
 
+        document.addTitle("Orden de Trabajo");
+        document.add(new Paragraph(TipoServicio));
+        document.add(new Paragraph("Nombre Empresa: "+ txtNombreEmpresa));
+        document.add(new Paragraph("Direccion Empresa: "+ txtDireccionEmpresa));
+
+        /*
         XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
         String htmlToPdf = "<html>" +
                 "<head>" +
                 "</head>" +
-                "<body bgcolor='#E6E6FA'>" +
+                "<body>" + "" + document.addTitle("Orden de Trabajo") +
                 "<h2> Nombre Empresa: "+ txtNombreEmpresa.getText().toString() + "</h2>" +
                 "</body> " +
                 "<h1> Direccion Empresa: "+ txtDireccionEmpresa.getText().toString() + "</h1> " +
@@ -185,8 +189,8 @@ public class SelfNoteFragment extends Fragment implements View.OnClickListener {
 
         String XHTML ="";
 
-
         worker.parseXHtml(pdfW, document, new StringReader(htmlToPdf));
+        */
         document.close();
 
         //viewPdf(myFile, getActivity());
